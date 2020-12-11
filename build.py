@@ -10,6 +10,9 @@ header = '''/*
  * glfx.js
  * http://evanw.github.com/glfx.js/
  *
+ * Forked with modifications:
+ * https://github.com/biigle/glfx.js
+ *
  * Copyright 2011 Evan Wallace
  * Released under the MIT license
  */
