@@ -179,7 +179,7 @@ exports.canvas = function() {
     canvas.vignette = wrap(vignette);
     canvas.vibrance = wrap(vibrance);
     canvas.sepia = wrap(sepia);
-    canvas.adjustGamma = wrap(adjustGamma);
+    canvas.gamma = wrap(gamma);
 
     return canvas;
 };

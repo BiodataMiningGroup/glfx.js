@@ -3,8 +3,8 @@
  * @description      Gamma correction using a given gamma
  * @param gamma      Gamma exponent between 0 and 5
  */
-function adjustGamma(gamma) {
-    gl.adjustGamma = gl.adjustGamma || new Shader(null, '\
+function gamma(gamma) {
+    gl.gamma = gl.gamma || new Shader(null, '\
         uniform sampler2D texture;\
         uniform float gamma;\
         varying vec2 texCoord;\
@@ -15,7 +15,7 @@ function adjustGamma(gamma) {
         }\
     ');
 
-    simpleShader.call(this, gl.adjustGamma, {
+    simpleShader.call(this, gl.gamma, {
         gamma: clamp(0.0, gamma, 5.0)
     });
 
