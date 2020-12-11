@@ -226,7 +226,12 @@ var filters = {
             this.addSlider('amount', 'Amount', 0, 1, 0.5, 0.01);
         }, function() {
             this.setCode('canvas.draw(texture).vignette(' + this.size + ', ' + this.amount + ').update();');
-        })
+        }),
+        new Filter('Gamma', 'gamma', function() {
+            this.addSlider('gamma', 'Gamma', 0, 5, 1, 0.01);
+        }, function() {
+            this.setCode('canvas.draw(texture).gamma(' + this.gamma + ').update();');
+        }),
     ],
     'Blur': [
         new Filter('Zoom Blur', 'zoomBlur', function() {
