@@ -10,7 +10,7 @@ function adjustGamma(gamma) {
         varying vec2 texCoord;\
         void main() {\
             vec4 color = texture2D(texture, texCoord);\
-            color.rgb = vec3(pow(color.r, gamma), pow(color.g, gamma), pow(color.b, gamma));\
+            color.rgb = pow(color.rgb, vec3(gamma));\
             gl_FragColor = color;\
         }\
     ');
